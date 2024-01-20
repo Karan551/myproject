@@ -1,0 +1,8 @@
+manage.py
+* __pycache__
+*.pyc
+*.pyo
+.venv
+db.sqlite3
+**/migrations/
+**/__pycache__/*.pyc

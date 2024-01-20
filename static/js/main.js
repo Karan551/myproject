@@ -1,0 +1,1 @@
+console.log("This is about webpage for my django project.")
