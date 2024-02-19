@@ -10,9 +10,15 @@
   </head>
   <body>
     <nav>
-      <a href="/">🏠️</a>
-      <a href="/about">😆️</a>
-      <a href="/posts">📰️</a>
+      <a href="/" >
+        <span role="img" aria-label="Home">🏠️</span>
+        </a>|
+      <a href="/about">
+        <span role="img" aria-label="about">😆️</span>
+        </a>|
+      <a href="{% url "post:post_list" %}">
+        <span role="img" aria-label="Post">📰️</span>
+        </a>
     </nav>
     <main>{% block content %}{% endblock content %}</main>
   </body>
