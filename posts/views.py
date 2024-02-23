@@ -12,6 +12,7 @@ def post_list(request):
 
 def post_page(request, slug):
     post = Post.objects.get(slug=slug)
+    # post=Post.objects.all().values()
     print("This is my first page:",post)
     return render(request, "posts/post_page.html",{"post":post})
 

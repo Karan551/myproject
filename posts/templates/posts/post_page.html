@@ -3,7 +3,8 @@
 {% block content %}
 <section>
   <h1>{{post.title}}</h1>
-    <p>{{post.date}}</p>
-    <p>{{post.body}}</p>
+  <img class="banner" src="{{post.banner.url}}" alt="{{post.title}}" />
+  <p>{{post.date}}</p>
+  <p>{{post.body}}</p>
 </section>
 {% endblock %}

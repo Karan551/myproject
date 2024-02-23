@@ -48,3 +48,10 @@ a:hover {
     opacity: 0.85;
     cursor: pointer;
 }
+
+/* To display proper image */
+.banner {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+}
