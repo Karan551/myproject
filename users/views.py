@@ -15,5 +15,4 @@ def register(request):
             return HttpResponse("Form is submitted successfully.")
     else:
         form = RegisterForm()
-    # print("This is form", form)
     return render(request, "users/register.html", {"form": form})
