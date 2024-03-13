@@ -1,6 +1,50 @@
-{% extends "layout.html" %} {% block title %}Register User{% endblock title %}
+{% extends "layout.html" %} 
+{% block title %}Register User{% endblock title %}
 {% block content %}
 
-<h2>Register a New User:</h2>
+<form action="{% url 'users:register' %}" method="post" class="form-container">
+  <h2 class="register-user">Register a New User:</h2>
+  {% csrf_token %}
+  <div class="mb-2">
+    <label class="inline-block">User Name: </label>
+    {{form.username}}
+  </div>
+  <div class="mb-2">
+    <label class="inline-block">Email: </label>
+    {{form.email}}
+  </div>
+  <div class="mb-2">
+    <label class="inline-block">Password: </label>
+    {{form.password1}}
+  </div>
+  <div class="mb-2">
+    <label class="inline-block">Confirm Password: </label>
+    {{form.password2}}
+  </div>
+  
+
+  
+
+
+  <!---If form through an error -->
+
+  {% if form.errors or form.non_field_errors %}
+  
+  <div class="error-msg">
+    {% for field in form %} 
+    {{field.errors}}
+    {% endfor %}
+  </div> 
+
+
+
+  {{form.non_field_errors}}
+
+  {% endif %}
+
+  <div class="btn-container">
+    <button class="btn">Submit</button>
+  </div>
+</form>
 
 {% endblock content %}
