@@ -18,7 +18,10 @@
         </a>|
       <a href="{% url "post:post_list" %}">
         <span role="img" aria-label="Post">📰️</span>
-        </a>
+        </a>|
+        <a href="{% url "users:register" %}">
+          <span role="img" aria-label="Register">🚀️</span>
+          </a>
     </nav>
     <main>{% block content %}{% endblock content %}</main>
   </body>
