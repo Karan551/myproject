@@ -21,7 +21,17 @@
         </a>|
         <a href="{% url "users:register" %}">
           <span role="img" aria-label="Register">🚀️</span>
+          </a>|
+        {% if not request.user.is_authenticated %}
+        <a href="{% url "users:login" %}">
+          <span role="img" aria-label="Login" title="Login">🔒</span>
           </a>
+        {% else %}
+        
+        <a href="{% url "users:logout" %}">
+          <span role="text" aria-label="Logout" title="Logout">Logout</span>
+          </a>
+        {% endif %}
     </nav>
     <main>{% block content %}{% endblock content %}</main>
   </body>
