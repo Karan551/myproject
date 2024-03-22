@@ -69,7 +69,7 @@ a:hover {
     margin: 20px auto;
     border: 2px solid whitesmoke;
     border-radius: 10px;
-    font-size:2rem;
+    font-size: 2rem;
 
 }
 
@@ -78,7 +78,7 @@ input {
     display: block;
     width: 100%;
     padding: 15px 30px;
-    margin:0.5rem 0.25rem;
+    margin: 0.5rem 0.25rem;
     border-radius: 15px;
 }
 
@@ -87,7 +87,7 @@ input {
 
 }
 
-input[type='text'] {
+input[name='username'] {
     text-transform: uppercase;
 }
 
@@ -96,10 +96,30 @@ input[type='text'] {
     margin: 10px auto;
 }
 
-.mb-2{
+.mb-2 {
     margin-bottom: 0.25rem;
 }
 
+div.check-container {
+    display: flex;
+    justify-content: flex-start;
+    /* align-items: flex-start; */
+}
+
+input[type="checkbox"] {
+    width: fit-content;
+    display: inline;
+    margin-left: 1.4rem;
+}
+
+#show-pwd {
+    font-size: 1.3rem;
+    margin: 0.2rem 5px;
+    padding:0.4rem 3px ;
+
+}
+
+/* Button Css */
 .btn {
     margin: 5px 15px;
     padding: 10px 25px;
@@ -109,6 +129,7 @@ input[type='text'] {
     color: #333;
     font-size: 1.5rem;
     font-weight: bold;
+    transition: all 0.3s ease-in-out;
 
 }
 
@@ -116,11 +137,12 @@ input[type='text'] {
     cursor: pointer;
     background-color: #4834DF;
     color: whitesmoke;
+    transform: scale(1.1);
 }
 
 
 /* Error message box */
-.error-msg{
+.error-msg {
     border-radius: 15px;
     background-color: #AE1438;
     margin: 15px 10px;
@@ -128,6 +150,6 @@ input[type='text'] {
     font-weight: bold;
     font-size: 1.25rem;
     color: #f5f5f5;
-    
+
 
 }
