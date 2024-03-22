@@ -21,12 +21,11 @@
     <label class="inline-block">Confirm Password: </label>
     {{form.password2}}
   </div>
-  
-
-  
-
-
-  <!---If form through an error -->
+  <div class="mb-2 check-container">
+    <input type="checkbox" name="check" id="check" title="show password">
+    <label for="check" id="show-pwd">Show Password</label>
+  </div>
+  <!---If form through an error. -->
 
   {% if form.errors or form.non_field_errors %}
   
@@ -35,9 +34,6 @@
     {{field.errors}}
     {% endfor %}
   </div> 
-
-
-
   {{form.non_field_errors}}
 
   {% endif %}
